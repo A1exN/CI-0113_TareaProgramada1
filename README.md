@@ -20,3 +20,13 @@ Costo base = 35.00
 
 - Si la distancia es mayor que 500 km, entonces al costo del envío se le suma 15.00.
 - Si el peso es mayor a 10 Kg, entonces al costo se le suma 10.00.
+
+# Pruebas Unitarias
+
+Para correr las pruebas unitarias ejecute:
+```
+make test
+``` 
+``` 
+./bin/tests
+```
