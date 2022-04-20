@@ -3,7 +3,8 @@
 
 #include "tipoEnvio.h"
 
-class EnvioServicioPostal : public TipoEnvio{
+class EnvioServicioPostal : public TipoEnvio
+{
 
   // Primera, Segunda, Tercera
   int clase;
