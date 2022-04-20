@@ -3,7 +3,7 @@
 
 #include "tipoEnvio.h"
 
-class EnvioFedEx
+class EnvioFedEx : public TipoEnvio
 {
 
 public:
