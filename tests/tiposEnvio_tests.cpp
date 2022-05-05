@@ -27,4 +27,16 @@ namespace
 
     delete envio;
   }
+
+  TEST(envio_servicio_postal_Test, terceraClase_pesoDe9Mas)
+  {
+    EnvioServicioPostal* envio = new EnvioServicioPostal("Tercera", 13, 173);
+
+    double actual = envio->CalculoEnvio();
+    double esperado = 2.076;
+
+    EXPECT_FLOAT_EQ(actual, esperado);
+
+    delete envio;
+  }
 }
