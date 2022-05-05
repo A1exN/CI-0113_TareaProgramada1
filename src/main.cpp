@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
 
-  EnvioServicioPostal* envio1 = new EnvioServicioPostal(3, 4, 7.5);
+  EnvioServicioPostal* envio1 = new EnvioServicioPostal("Segunda", 4, 632);
   EnvioFedEx* envio2 = new EnvioFedEx(11, 434);
 
   cout << envio1->CalculoEnvio() << endl;

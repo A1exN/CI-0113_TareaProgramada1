@@ -1,6 +1,6 @@
 #include "envioServicioPostal.h"
 
-EnvioServicioPostal::EnvioServicioPostal(int clase, float peso, float distancia)
+EnvioServicioPostal::EnvioServicioPostal(string clase, float peso, float distancia)
 {
   this->clase = clase;
   this->distancia = distancia;
@@ -14,11 +14,7 @@ float EnvioServicioPostal::CalculoEnvio()
 
 float EnvioServicioPostal::CostoPorKilometro()
 {
-  if (this->clase == 3)
-  {
-    return 0.012;
-  }
-  else if (this->clase == 2)
+  if (this->clase == "Segunda")
   {
     if (this->peso < 4)
     {
@@ -33,7 +29,7 @@ float EnvioServicioPostal::CostoPorKilometro()
       return 0.075;
     }
   }
-  else if (this->clase == 1)
+  else if (this->clase == "Primera")
   {
     if (this->peso < 4)
     {
@@ -48,5 +44,6 @@ float EnvioServicioPostal::CostoPorKilometro()
       return 0.6;
     }
   }
-  return 0;
+  // Si la clase es "Tercera"
+  return 0.012;
 }

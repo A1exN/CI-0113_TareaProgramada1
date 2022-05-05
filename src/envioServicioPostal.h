@@ -2,16 +2,19 @@
 #define ENVIOSERVICIOPOSTAL_H
 
 #include "tipoEnvio.h"
+#include <string>
+
+using namespace std;
 
 class EnvioServicioPostal : public TipoEnvio
 {
 
   // Primera, Segunda, Tercera
-  int clase;
+  string clase;
   float CostoPorKilometro();
 
   public:
-  EnvioServicioPostal(int clase, float peso, float distancia);
+  EnvioServicioPostal(string clase, float peso, float distancia);
   float CalculoEnvio();
 
 };
