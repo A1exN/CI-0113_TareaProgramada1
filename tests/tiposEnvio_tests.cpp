@@ -75,4 +75,40 @@ namespace
 
     delete envio;
   }
+
+  TEST(envio_servicio_postal_Test, primeraClase_pesoDe0a3)
+  {
+    EnvioServicioPostal* envio = new EnvioServicioPostal("Primera", 3, 237);
+
+    double actual = envio->CalculoEnvio();
+    double esperado = 71.1;
+
+    EXPECT_FLOAT_EQ(actual, esperado);
+
+    delete envio;
+  }
+  
+  TEST(envio_servicio_postal_Test, primeraClase_pesoDe4a8)
+  {
+    EnvioServicioPostal* envio = new EnvioServicioPostal("Primera", 5, 311);
+
+    double actual = envio->CalculoEnvio();
+    double esperado = 139.95;
+
+    EXPECT_FLOAT_EQ(actual, esperado);
+
+    delete envio;
+  }
+
+  TEST(envio_servicio_postal_Test, primeraClase_pesoDe9Mas)
+  {
+    EnvioServicioPostal* envio = new EnvioServicioPostal("Primera", 13, 173);
+
+    double actual = envio->CalculoEnvio();
+    double esperado = 103.8;
+
+    EXPECT_FLOAT_EQ(actual, esperado);
+
+    delete envio;
+  }
 }
