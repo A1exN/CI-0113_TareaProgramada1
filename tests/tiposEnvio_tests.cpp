@@ -11,7 +11,19 @@ namespace
     double actual = envio->CalculoEnvio();
     double esperado = 2.844;
 
-    EXPECT_DOUBLE_EQ(actual, esperado);
+    EXPECT_FLOAT_EQ(actual, esperado);
+
+    delete envio;
+  }
+
+  TEST(envio_servicio_postal_Test, terceraClase_pesoDe4a8)
+  {
+    EnvioServicioPostal* envio = new EnvioServicioPostal("Tercera", 5, 311);
+
+    double actual = envio->CalculoEnvio();
+    double esperado = 3.732;
+
+    EXPECT_FLOAT_EQ(actual, esperado);
 
     delete envio;
   }
