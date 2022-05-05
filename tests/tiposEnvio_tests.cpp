@@ -111,4 +111,52 @@ namespace
 
     delete envio;
   }
+
+  TEST(envio_FedEx_Test, distanciaMenorA500Km_pesoMenorA10Kg)
+  {
+    EnvioFedEx* envio = new EnvioFedEx(7, 178);
+
+    double actual = envio->CalculoEnvio();
+    double esperado = 35;
+
+    EXPECT_FLOAT_EQ(actual, esperado);
+
+    delete envio;
+  }
+
+  TEST(envio_FedEx_Test, distanciaMayorA500Km_pesoMenorA10Kg)
+  {
+    EnvioFedEx* envio = new EnvioFedEx(7, 691);
+
+    double actual = envio->CalculoEnvio();
+    double esperado = 50;
+
+    EXPECT_FLOAT_EQ(actual, esperado);
+
+    delete envio;
+  }
+
+  TEST(envio_FedEx_Test, distanciaMenorA500Km_pesoMayorA10Kg)
+  {
+    EnvioFedEx* envio = new EnvioFedEx(14, 178);
+
+    double actual = envio->CalculoEnvio();
+    double esperado = 45;
+
+    EXPECT_FLOAT_EQ(actual, esperado);
+
+    delete envio;
+  }
+
+  TEST(envio_FedEx_Test, distanciaMayorA500Km_pesoMayorA10Kg)
+  {
+    EnvioFedEx* envio = new EnvioFedEx(14, 691);
+
+    double actual = envio->CalculoEnvio();
+    double esperado = 60;
+
+    EXPECT_FLOAT_EQ(actual, esperado);
+
+    delete envio;
+  }
 }
