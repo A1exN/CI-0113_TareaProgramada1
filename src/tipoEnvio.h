@@ -4,11 +4,11 @@
 class TipoEnvio {
   
   protected:
-  float distancia;
-  float peso;
+  double distancia;
+  double peso;
 
   public:
-  virtual float CalculoEnvio() = 0;
+  virtual double CalculoEnvio() = 0;
 
 };
 

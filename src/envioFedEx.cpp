@@ -1,12 +1,12 @@
 #include "envioFedEx.h"
 
-EnvioFedEx::EnvioFedEx(float peso, float distancia)
+EnvioFedEx::EnvioFedEx(double peso, double distancia)
 {
   this->peso = peso;
   this->distancia = distancia;
 }
 
-float EnvioFedEx::CalculoEnvio()
+double EnvioFedEx::CalculoEnvio()
 {
   int costo = 35;
 
