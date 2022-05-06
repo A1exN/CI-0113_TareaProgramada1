@@ -11,7 +11,6 @@ class EnvioServicioPostal : public TipoEnvio
 
   // Primera, Segunda, Tercera
   string clase;
-  float CostoPorKilometro();
 
   public:
   EnvioServicioPostal(string clase, float peso, float distancia);

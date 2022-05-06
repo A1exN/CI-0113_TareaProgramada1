@@ -9,41 +9,39 @@ EnvioServicioPostal::EnvioServicioPostal(string clase, float peso, float distanc
 
 float EnvioServicioPostal::CalculoEnvio()
 {
-  return this->distancia * CostoPorKilometro();
-}
+  // Si la clase es tecera
+  float costoPorKilometro = 0.012;
 
-float EnvioServicioPostal::CostoPorKilometro()
-{
   if (this->clase == "Segunda")
   {
     if (this->peso < 4)
     {
-      return 0.028;
+      costoPorKilometro = 0.028;
     }
     else if (this->peso < 9)
     {
-      return 0.053;
+      costoPorKilometro = 0.053;
     }
     else
     {
-      return 0.075;
+      costoPorKilometro = 0.075;
     }
   }
   else if (this->clase == "Primera")
   {
     if (this->peso < 4)
     {
-      return 0.3;
+      costoPorKilometro = 0.3;
     }
     else if (this->peso < 9)
     {
-      return 0.45;
+      costoPorKilometro = 0.45;
     }
     else
     {
-      return 0.6;
+      costoPorKilometro = 0.6;
     }
   }
-  // Si la clase es "Tercera"
-  return 0.012;
+
+  return this->distancia * costoPorKilometro;
 }
