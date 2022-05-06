@@ -14,8 +14,8 @@ class EnvioServicioPostal : public TipoEnvio
   float CostoPorKilometro();
 
   public:
-  EnvioServicioPostal(string clase, double peso, double distancia);
-  double CalculoEnvio();
+  EnvioServicioPostal(string clase, float peso, float distancia);
+  float CalculoEnvio();
 
 };
 

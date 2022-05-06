@@ -1,13 +1,13 @@
 #include "envioServicioPostal.h"
 
-EnvioServicioPostal::EnvioServicioPostal(string clase, double peso, double distancia)
+EnvioServicioPostal::EnvioServicioPostal(string clase, float peso, float distancia)
 {
   this->clase = clase;
   this->distancia = distancia;
   this->peso = peso;
 }
 
-double EnvioServicioPostal::CalculoEnvio()
+float EnvioServicioPostal::CalculoEnvio()
 {
   return this->distancia * CostoPorKilometro();
 }

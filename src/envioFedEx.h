@@ -7,8 +7,8 @@ class EnvioFedEx : public TipoEnvio
 {
 
 public:
-  EnvioFedEx(double peso, double distancia);
-  double CalculoEnvio();
+  EnvioFedEx(float peso, float distancia);
+  float CalculoEnvio();
 
 };
 
